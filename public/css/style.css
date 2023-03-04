@@ -1,5 +1,93 @@
 @charset 'utf-8';
 
+/*--- common ---*/
+html,body,h1,h2,h3,p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/*--- header area ---*/
+.hcontainer {
+  display: flex;
+  width:100%;
+  height:60px;
+  background-color:aquamarine;
+}
+
+.logo {
+  display: flex;
+  align-items: center; /* 要素の垂直方向を中心に配置 */
+  width:100px;
+  margin-right: auto;
+  padding:0 20px;
+  font-size: 20px;
+  color:#333; 
+}
+
+.searchbox {
+  display: flex;
+  align-items: center; /* 要素の垂直方向を中心に配置 */
+  width:1550px;
+  min-width: 250px; 
+  margin:11px 0;  
+  overflow: hidden; /* 入力欄からはみ出た文字を表示しない */
+  border: 1px solid aquamarine;
+  border-radius: 25px;
+}
+
+.txtbox1 {
+  width:100%;  /* テキストボックス可変幅になる */
+  height:40px;
+  border-radius: 3px;
+  border:1px solid #333;
+  padding-left:15px;
+  border: none;
+  outline:none; /* テキストボックスにフォーカスが当たった時に線を表示しない*/
+}
+
+input::placeholder{
+  color: #767d83;
+}
+
+.searchbox .bi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 40px;
+  border: none;
+  background-color:deepskyblue;
+  cursor: pointer;
+  color:aliceblue;
+}
+
+.hmenu {
+  width:350px;
+  display: flex;
+  align-items: center;
+
+}
+
+.limenu a{
+  margin-right: 40px;
+  color:#333; 
+  font-size: 18px;
+}
+
+.hmenu li i {
+  font-size: 20px;
+  margin-right: 50px;
+  color:#333;
+}
+
 .title {
   font-size: 54px;
   color:skyblue;
