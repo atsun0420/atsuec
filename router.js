@@ -4,6 +4,8 @@ const express = require('express'); // Node.jsのフレームワーク、express
 const router = express.Router(); // ルーティング処理を記述するための準備
 const mysql = require('mysql'); // Node.jsからMySQLを操作するための準備
 
+
+
 // MySQLの接続情報
 const con = mysql.createConnection({
   host: 'localhost',
@@ -47,29 +49,6 @@ router.get('/', (req, res) => {
 .get('/comp', (req, res) => {
   res.render('comp.ejs');
 })
-
-// // 買い物リストフォームの表示
-// .get('/index', (req, res) => {
-// con.query('SELECT * FROM items',
-// (error, results) => {
-//     if (error) {
-//     console.log(error);
-//   } 
-//   res.render('index.ejs', {items: results});
-//   });
-// })
-
-// // 編集フォームの表示 ◆ここの処理はこのままでこれ以上は弄らない◆
-// .get('/edit/:id', (req, res) => {
-//   let id = req.params.id;
-//   con.query('SELECT * FROM items WHERE id = ?',
-//   id,(error, results) => {
-//     if (error) {
-//       console.log(error);
-//     }
-//         res.render('edit.ejs', {item: results[0]}); //編集データを1件渡す
-//     });
-// })
 
 // // ルートパラメータの値はparamsオブジェクトでフォームの値はbodyオブジェクトで受け取る
 // // 更新処理
