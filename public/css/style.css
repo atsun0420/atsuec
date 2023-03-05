@@ -1,7 +1,7 @@
 @charset 'utf-8';
 
 /*--- common ---*/
-html,body,h1,h2,h3,p {
+html,body,ul,h1,h2,h3,p {
   margin: 0;
   padding: 0;
 }
@@ -70,30 +70,55 @@ input::placeholder{
 }
 
 .hmenu {
-  width:350px;
+  width:380px;
   display: flex;
   align-items: center;
-
+  margin-top: 10px;
 }
 
-.limenu a{
+.limenu a,
+.hmenu li i{
   margin-right: 40px;
-  color:#333; 
+  color:#333;
   font-size: 18px;
 }
 
 .hmenu li i {
-  font-size: 20px;
-  margin-right: 50px;
-  color:#333;
+  font-size: 24px;
+  margin-left: 40px;
 }
 
-.title {
-  font-size: 54px;
-  color:skyblue;
+
+/*------ スライダーの横幅 ------*/
+.slide{
+  width:70%;
+  margin:0 auto;
 }
 
-.form-link {
-  font-size: 40px;
-  color:skyblue;
+/*------ スライダー画像 ------*/
+.slide img{
+	width:100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+/*-------- 高さ調整 ----------*/
+.slide .slick-slide{
+	height:auto!important;
+}
+
+/*---------- 矢印 ----------*/
+.slide .slick-next{
+    right:0!important;
+}
+.slide .slick-prev{
+    left:0!important;
+}
+.slide .slick-arrow{
+    width: initial!important;
+    height: initial!important;
+    z-index:2!important;
+}
+.slide .slick-arrow:before{
+    font-size: 30px!important;
 }
