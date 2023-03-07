@@ -146,6 +146,7 @@
 
   .header-sp {
     max-width:670px;
+    width:100%;
     height: 50px;
     display: flex;  
     align-items: center;
@@ -238,7 +239,7 @@
 /* メニューのデザイン*/
 .nav {
   width:70px;
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 .nav_content {
@@ -273,13 +274,15 @@
 /* スライダー幅 */
   .slide,
   .slide2{
-    max-width:670px;  
+    max-width:670px;
+    width:100%; 
   }
 
   .slide img,
   .slide2 img{
     max-width:670px;
     height: 300px;
+    width:100%;
     object-fit: cover;
   }
 
@@ -377,4 +380,104 @@
     color:red;
     font-size: 16px;
   }
+
+  /*  contact page -スマートフォン用- 
+                                    */
+.contact-frm {
+  display: none;
+}
+
+.contact-frm-sp {
+  margin: 0 20px;
+  width:300px;
+  display: block;
+  margin: 0 auto;
+}
+
+.inputTitle-sp {
+  font-size: 20px;
+  margin:70px 0 30px 20px;
+  font-weight: bold;
+}
+
+.inp-word {
+  margin:30px 0 10px 30px;
+}
+
+.selectjob-sp,
+.selectage-sp {
+  margin-left: 30px;
+  border:1px solid #7c6e6e;
+  background-color:antiquewhite;
+}
+
+.txtbox-sp {
+  width:280px;
+  height:25px;
+  margin-left: 30px;
+  border:1px solid #7c6e6e;
+  background-color:antiquewhite;
+}
+
+.radio-sp {
+  margin-left: 30px;
+  border:1px solid #888;
+}
+
+.txt2 {
+  margin-left: 30px;
+  border:1px solid #7c6e6e;
+  background-color:antiquewhite;
+}
+
+.errMsgAge-sp {
+  color:red;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-left: 30px;
+}
+
+.errMsgGender-sp {
+  color:red;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-left: 30px;
+}
+
+.errMsgTitle-sp {
+  color:red;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-left: 30px;
+}
+
+.errMsgGoiken-sp {
+  color:red;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-left: 30px;
+}
+
+.btnarea-sp {
+  width:300px;
+  text-align: center;
+}
+
+#contactBtn-sp {
+  margin-top:30px;
+  width: 80px;
+  height:40px;
+  font-size: 16px;
+  border-radius: 10px;
+  border:1px solid #fff;
+  color:#fff;
+  background-color:darkgray;
+  text-align: center;
+}
+
+.spline {
+  margin-right: 3px;
+  color:skyblue;
+}
+
 }
