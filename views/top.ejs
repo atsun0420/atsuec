@@ -1,59 +1,56 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <!-- スライダー動作用本体 -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-  <!-- スライダーcss本体 -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
-  <!-- スライダーテーマ用css -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
-  <!-- CSS -->
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/responsive.css">
-  <!-- BootStrap -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
-  <!-- fontawesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"> 
-  <title>AtsuEC</title>
-</head>
-<body>
-  <header>
-    <div class="hcontainer">
-      <div class="logo">AtsuEC</div>
-      <div class="searchbox">
-        <input class="txtbox1" type="text" placeholder="キーワードを入力" >
-        <i class="bi bi-search"></i>
-      </div>
-      <div>
-        <ul class="hmenu">
-          <li><i class="bi bi-cart2"></i></li>
-          <li class="limenu"><a href="/menu" >商品一覧</a></li>
-          <li class="limenu"><a href="/contact" >お問い合わせ</a></li>
-        </ul>
+  <%- include('partials/header'); %>
+  <div class="main">
+    <div class="slide">   
+      <div><img src="./images/spring1.jpg"></div>
+      <div><img src="./images/chair.jpg"></div>   
+      <div><img src="./images/fruits1.jpg"></div>
+    </div>
+    <div class="itemcategory" >
+      <ul class="itemcate1">
+        <li class="itemtitle"><a href="/menu">家電・PC</a></li>
+        <li class="itemtitle"><a href="/menu">食品</a></li>
+        <li class="itemtitle"><a href="/menu">ファッション</a></li>
+        <li class="itemtitle"><a href="/menu">ドリンク・お酒</a></li>
+        <li class="itemtitle"><a href="/menu">インテリア</a></li>
+        <li class="itemtitle"><a href="/menu">日用雑貨</a></li>
+        <li class="itemtitle"><a href="/menu">本・電子書籍</a></li>
+        <li class="itemtitle"><a href="/menu">ホビー・音楽・ゲーム</a></li>
+        <li class="itemtitle"><a href="/menu">コスメ・医薬品</a></li>
+        <li class="itemtitle"><a href="/menu">車・バイク</a></li>
+      </ul>
+    </div>
+    <div class="itemspecial">アイテム特集
+      <p class="specialword">思わず買いたくなる商品がたくさん。まずはそんな世界を見に行こう！</p>
+      <div class="slide2">   
+        <a href="/menu"><div><img src="./images/food.jpg"></div></a>
+        <a href="/menu"><div><img src="./images/game.jpg"></div></a>   
+        <a href="/menu"><div><img src="./images/medical.jpg"></div></a>
+        <a href="/menu"><div><img src="./images/interior.jpg"></div></a>
+        <a href="/menu"><div><img src="./images/drink.jpg"></div></a>
       </div>
     </div>
-  </header>
-  <main>
-    <div class="slide">   
-      <div><img src="./images/slide5.jpg"></div>
-      <div><img src="./images/slide2.jpg"></div>   
-      <div><img src="./images/slide4.jpg"></div>
+    <div class="itemsale">お買い得セール
+      <p class="specialword">ただいま食品全品8%オフ!<br>また、1度に10000円以上のご注文で5%オフのお買い得セールやってます!</p>
+    </div>
+    <script>
+        $('.slide').slick({
+          autoplay: true,       //自動再生
+          autoplaySpeed: 2500,  //自動再生のスピード
+          speed: 800,           //スライドするスピード
+          dots: true,           //スライド下のドット
+          arrows: true,         //左右の矢印
+          infinite: true,       //永久にループさせる
+        });     
+
+        $('.slide2').slick({
+          autoplay: true,         //自動再生
+          autoplaySpeed: 0,       //自動再生のスピード
+          speed: 4000,            //スライドスピード
+          slidesToShow: 1,        //スライドの表示枚数
+          cssEase: "linear",      //スライドの動きを等速に
+          pauseOnHover: false,    //ホバーしても止まらないように
+          pauseOnFocus: false,    //フォーカスしても止まらないように
+        });
+    </script>
   </div>
-      <script>
-          $('.slide').slick({
-            autoplay: true,       //自動再生
-            autoplaySpeed: 2000,  //自動再生のスピード
-            speed: 800,           //スライドするスピード
-            dots: true,           //スライド下のドット
-            arrows: true,         //左右の矢印
-            infinite: true,       //永久にループさせる
-          });   
-      </script>
-  </main>
-</body>
-</html>
+  <%- include('partials/footer'); %>
