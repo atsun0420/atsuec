@@ -1,18 +1,58 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/responsive.css">
-  
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-  <title>商品詳細</title>
-</head>
-<body>
-  <p class="title">メニュー詳細画面です！</p>
-  <a href="/" class="form-link">TOPへ戻る</a>
-</body>
-</html>
+<%- include('partials/header'); %>
+<div class="main">
+  <div class="itemdetail-container">
+    <div>
+      <img src="images/pc1.jpg" alt="">
+    </div>
+    <div class="itemdetail-sentence">
+      <table>
+        <tr>
+          <th>商品名</th><td>notePC AT-N230</td>
+        </tr>
+        <tr>
+          <th>価格</th><td>98,000円</td>
+        </tr> 
+        <tr>
+          <th><p class="timesalecolor">タイムセール価格</p></th><td><p class="timesalecolor">93,000円</p></td>
+        </tr> 
+      </table>
+      <div class="itemcoupon">クーポンGET!</div>
+      <table>
+        <tr>
+          <th>発送国</th><td>日本</td>
+        </tr>
+        <tr>
+          <th>送料</th><td>550円</td>
+        </tr> 
+        <tr>
+          <th>発送日</th><td>3月9日以内に発送</td>
+        </tr> 
+      </table>
+      <table>
+        <tr>
+          <th>返品</th><td>キャンセル/返品/払い戻しは<a href="#">こちら</a>から</td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th>数量</th>
+          <td>
+            <select name="" id="">
+                <option value="-">-</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+          </td>
+        </tr>
+      </table>
+        <div class="inscart">
+          <a href="">カートに入れる</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%- include('partials/footer'); %>
