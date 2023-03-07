@@ -16,6 +16,10 @@ li {
   list-style: none;
 }
 
+.main {
+  overflow: hidden; /* 画面右側の余白をなくす */
+}
+
 /*--- ヘッダーエリア ---*/
 .hcontainer {
   display: flex;
@@ -34,8 +38,8 @@ li {
   width:100px;
   margin-right: auto;
   padding:0 10px;
- 
 }
+
 .logo a {
   font-size: 20px;
   color:#333; 
@@ -198,7 +202,7 @@ input::placeholder{
 /*------ トップ画面 お買い得セールエリア ------*/
 .itemsale {
   width: 1200px;
-  height: 100px;
+  height: 120px;
   color:blueviolet;
   margin: 0 auto;
   padding:10px 5px;
@@ -224,19 +228,7 @@ input::placeholder{
   font-size: 16px;
 }
 
-/* フッターエリアを画面最下部に表示*/
-body {
-  display: flex; /* フレックスボックスを設定*/
-  flex-flow: column; /* フレックスボックスを縦並びに設定*/
-  min-height: 100vh; /* body全体の表示領域を確保*/
-}
-
-.main {
-  flex:1; /* bodyタグ中のheader・footer領域の高さを除いた残りの部分がmainクラスで囲った領域で埋まる */
-}
-
-
-/*------ 商品一覧画面 商品一覧エリア ------*/
+/*------  商品一覧エリア ------*/
 
 .itemcontainer {
   max-width:1200px;
@@ -310,7 +302,7 @@ body {
   margin-top: 2px;
 }
 
-/* アイテム詳細画面 アイテム詳細エリア */
+/* アイテム詳細エリア */
 
 .itemdetail-container {
   display: flex;
@@ -331,7 +323,6 @@ body {
   width:240px;
   text-align: left;
   font-weight: normal;
-
 }
 
 .itemdetail-container td {
@@ -379,13 +370,13 @@ body {
 
 /*  お問い合わせ画面  */
 .contact-frm {
-width:600px;
-margin: 0 auto;  
+  width:600px;
+  margin: 0 auto;  
 }
 
 .tablecontact {
-box-sizing: border-box;
-border-radius: 5px;
+  box-sizing: border-box;
+  border-radius: 5px;
 }
 
 .contact-frm table {
@@ -408,7 +399,7 @@ border-radius: 5px;
 }
 
 .tableborder {
-border:1px solid skyblue;
+  border:1px solid skyblue;
 }
 
 .contact-container {
