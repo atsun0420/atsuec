@@ -458,7 +458,7 @@
 
   .btnarea-sp {
     width:300px;
-    text-align: center;
+    margin-left: 30px;
   }
 
   #contactBtn-sp {
@@ -470,7 +470,6 @@
     border:1px solid #fff;
     color:#fff;
     background-color:darkgray;
-    text-align: center;
   }
 
   .spline {
