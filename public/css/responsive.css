@@ -389,7 +389,6 @@
     max-width:300px;
     width:100%;
     display: block;
-    margin: 0 auto;
   }
 
   .inputTitle-sp {
@@ -410,7 +409,7 @@
   }
 
   .txtbox-sp {
-    width:280px;
+    width:240px;
     height:25px;
     margin-left: 30px;
     border:1px solid #7c6e6e;
@@ -424,6 +423,7 @@
 
   .txt2 {
     margin-left: 30px;
+    width: 240px;
     border:1px solid #7c6e6e;
     background-color:antiquewhite;
   }
