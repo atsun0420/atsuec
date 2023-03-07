@@ -1,9 +1,22 @@
 @charset 'utf-8';
 
+/* フッターエリアを画面最下部に表示*/
+body {
+  display: flex; /* フレックスボックスを設定*/
+  flex-flow: column; /* フレックスボックスを縦並びに設定*/
+  min-height: 100vh; /* body全体の表示領域を確保*/
+}
+
+.main {
+  flex:1; /* bodyタグ中のheader・footer領域の高さを除いた残りの部分がmainクラスで囲った領域で埋まる */
+}
+
 /*--- common ---*/
 html,body,ul,h1,h2,h3,p {
   margin: 0;
   padding: 0;
+  font-family: sans-serif;
+  color:#333;
 }
 
 a {
@@ -14,12 +27,38 @@ li {
   list-style: none;
 }
 
-/*--- header area ---*/
+/* デバイス別表示 */
+.pc {
+  display: block;
+  margin-right: 20px;
+  color:blue;
+  font-size: 14px;
+}
+
+.tab {
+  display: none;
+  margin-right: 20px;
+  color:blue;
+  font-size: 14px;
+}
+
+.sp {
+  display: none;
+  margin-right: 20px;
+  color:blue;
+  font-size: 14px;
+}
+
+/*--- ヘッダーエリア ---*/
 .hcontainer {
   display: flex;
-  width:100%;
+  max-width:1200px;
   height:60px;
-  background-color:aquamarine;
+  margin: 0 auto;
+}
+
+.header-sp {
+  display:none;
 }
 
 .logo {
@@ -35,11 +74,11 @@ li {
 .searchbox {
   display: flex;
   align-items: center; /* 要素の垂直方向を中心に配置 */
-  width:1550px;
+  width:700px;
   min-width: 250px; 
   margin:11px 0;  
   overflow: hidden; /* 入力欄からはみ出た文字を表示しない */
-  border: 1px solid aquamarine;
+  border: 2px solid skyblue;
   border-radius: 25px;
 }
 
@@ -64,16 +103,16 @@ input::placeholder{
   width: 50px;
   height: 40px;
   border: none;
-  background-color:deepskyblue;
+  background-color:skyblue;
   cursor: pointer;
   color:aliceblue;
 }
 
 .hmenu {
-  width:380px;
+  width:400px;
   display: flex;
   align-items: center;
-  margin-top: 10px;
+  line-height: 60px;
 }
 
 .limenu a,
@@ -88,26 +127,23 @@ input::placeholder{
   margin-left: 40px;
 }
 
-
-/*------ スライダーの横幅 ------*/
+/*------ トップ画面 スライダー処理 ------*/
 .slide{
-  width:70%;
+  max-width:1200px;
+  width:100%;
   margin:0 auto;
 }
 
-/*------ スライダー画像 ------*/
 .slide img{
 	width:100%;
   height: 400px;
   object-fit: cover;
 }
 
-/*-------- 高さ調整 ----------*/
 .slide .slick-slide{
 	height:auto!important;
 }
 
-/*---------- 矢印 ----------*/
 .slide .slick-next{
     right:0!important;
 }
@@ -121,4 +157,406 @@ input::placeholder{
 }
 .slide .slick-arrow:before{
     font-size: 30px!important;
+}
+
+/*------ トップ画面 商品一覧エリア ------*/
+.itemcategory {
+  width: 1000px;
+  height: 80px;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+.itemcategory ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.itemcategory ul li {
+  width: 20%;
+  height: 30px;
+}
+
+.itemcate1 {
+  display: flex;
+  line-height: 30px; /* 縦方向で中央揃え(1行のときのみ適用可能) */
+}
+
+.itemtitle {
+  text-align: center;
+  width:20%;
+}
+
+.itemtitle a {
+  color:blueviolet;
+}
+
+/*------ トップ画面 アイテム特集エリア ------*/
+.itemspecial {
+  width: 1200px;
+  color:blueviolet;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding:10px 5px; /* paddingの幅を足して合計1200pxにする*/
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+.specialword {
+  font-size: 16px;
+  color:#333;
+  padding:5px 0 10px 45px;
+}
+
+.slide{
+  max-width:1200px;
+  width:100%;
+  margin:0 auto;
+}
+
+.slide2 img{
+	width:100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.slide2 .slick-slide{
+  height:auto!important;
+}
+
+/*------ トップ画面 お買い得セールエリア ------*/
+.itemsale {
+  width: 1200px;
+  height: 100px;
+  color:blueviolet;
+  margin: 0 auto;
+  padding:10px 5px;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+/*------ フッターエリア ------*/
+.fcontainer {
+  width:1200px;
+  height: 80px;
+  background-color: skyblue;
+  margin: 0 auto;
+  border-top:1px solid #767d83;
+  margin-top: 50px;
+  display: grid; /* 複数行をグリッド形式にする*/
+  place-content: center; /* containerという親要素を中央に揃える*/
+  place-items: center; /* コンテナの中のアイテムをそれぞれ中央にする */
+}
+
+.footerword {
+  color:#333;
+  font-size: 16px;
+}
+
+/*------ 商品一覧画面 商品一覧エリア ------*/
+
+.itemcontainer {
+  max-width:1200px;
+  margin: 0 auto;
+}
+
+.topLink{
+  padding:15px 20px 0 0;
+  text-align: right;
+  font-size: 18px;
+}
+
+.menu-container {
+  max-width:1280px;
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.menu-box {
+  width:calc(20% - 8px);
+  margin-bottom: 50px;
+}
+
+.menu-container a {
+  display: block; /* aタグがインライン要素のためブロック要素に設定*/
+  position:relative; /* a要素を起点位置に設定*/
+}
+
+/* 疑似要素のpaddingで高さを補完する */
+.menu-container a::before{
+  content:"";
+  display: block;
+  padding-top: 100%; /* %で設定すると親要素の横幅を基準とする (親要素と同じ幅に設定)*/
+}
+
+.menu-container img{
+  position: absolute; /* 親要素の左上を起点とする */
+  top:0;
+  left:0;
+  width:100%; /* 幅を可変対応 */
+  height:100%; /* 高さを可変対応 */
+  object-fit: cover; 
+  border-radius: 10px;
+}
+
+.emptyitem {
+  width:calc(20% - 8px);
+  height: 0;
+}
+
+.menuS {
+  color:tomato;
+  padding:10px 0 0 10px;
+}
+
+.menu-category {
+  font-size: 24px;
+  color:cornflowerblue;
+  padding:30px 0 15px 10px;
+}
+
+.menu-title{
+  color:#333;
+  margin-top: 5px;
+}
+
+.menu-price{
+  color:#333;
+  margin-top: 2px;
+}
+
+/* アイテム詳細画面 アイテム詳細エリア */
+
+.itemdetail-container {
+  display: flex;
+  width:1200px;
+  margin: 100px auto;
+}
+
+.itemdetail-container div img {
+  max-width:600px;
+  max-height:600px;
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.itemdetail-container th {
+  width:240px;
+  text-align: left;
+  font-weight: normal;
+
+}
+
+.itemdetail-container td {
+  width:360px;
+  text-align: left;
+  font-weight: normal;
+}
+
+.itemdetail-sentence {
+  margin-left: 30px;
+}
+
+.timesalecolor{
+  color:red;
+  font-size: 18px;
+}
+
+.itemcoupon {
+  color:cornflowerblue;
+  font-size: 18px;
+  text-align: center;
+  max-width:460px;
+  height:36px;
+  border:2px solid pink;
+  border-radius: 10px;
+  line-height: 36px;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+.inscart {
+  max-width:200px;
+  height:36px;
+  line-height: 36px;
+  background-color:skyblue;
+  text-align: center;
+  border-radius: 10px;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+.inscart a {
+  color:antiquewhite;
+}
+
+/*  お問い合わせ画面  */
+.contact-frm {
+width:600px;
+margin: 0 auto;  
+}
+
+.tablecontact {
+box-sizing: border-box;
+border-radius: 5px;
+}
+
+.contact-frm table {
+  width:600px;
+  border-collapse: collapse;
+}
+
+.contact-frm th {
+  width:200px;
+  text-align: left;
+  padding:20px 10px;
+  font-weight: normal;
+  border-bottom: 1px dotted skyblue;
+}
+
+.contact-frm td {
+  width:400px;
+  padding:20px 10px;
+  border-bottom: 1px dotted skyblue;
+}
+
+.tableborder {
+border:1px solid skyblue;
+}
+
+.contact-container {
+  margin-top: 100px;
+  margin-left: 30px;
+}
+
+.conTitle{
+  color:#333;
+  font-size: 24px;
+  margin: 20px 0;
+  margin-left: 20px;
+}
+
+.conMsg {
+  color:#333;
+  font-size: 14px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+}
+
+.inputTitle {
+  font-size: 20px;
+  margin-top: 70px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.requiredSentence {
+  margin-left: 40px;
+  color:red;
+  font-size: 14px;
+}
+
+.requiredRed {
+  margin-left: 20px;
+  color:red;
+  font-size: 12px;
+  text-align: right;
+}
+
+.errMsgAge {
+  color:red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.errMsgGender {
+  color:red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.errMsgTitle {
+  color:red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.errMsgGoiken {
+  color:red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.txtbox {
+  width:280px;
+  height:25px;
+  border:1px solid #7c6e6e;
+  background-color:antiquewhite;
+}
+
+.txttitle {
+  width:280px;
+  height:25px;
+  border:1px solid #7c6e6e;
+  background-color:antiquewhite;
+}
+
+.selectjob,
+.selectage {
+  width:150px;
+  border:1px solid #7c6e6e;
+  background-color:antiquewhite;
+}
+
+.txtarea {
+  width:280px;
+  border:1px solid #7c6e6e;
+  background-color:antiquewhite;
+}
+
+.radio {
+  border:1px solid #888;
+}
+
+.contactLink {
+  margin:30px 0 20px 20px ;
+}
+
+.btnarea {
+  width:600px;
+  text-align: center;
+}
+
+#contactBtn {
+  margin:20px 0;
+  width: 100px;
+  height:40px;
+  font-size: 16px;
+  border-radius: 10px;
+  border:1px solid #fff;
+  color:#fff;
+  background-color:darkgray;
+  text-align: center;
+}
+
+/* お問い合わせ完了画面 */
+
+.compcontainer {
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.comptitle {
+  font-size: 24px;
+}
+
+.compword {
+  font-size: 16px;
+  margin-top: 10px;
 }
