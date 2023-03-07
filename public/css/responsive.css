@@ -164,9 +164,10 @@
   }
 
   .logo {
-    width:60px;
+    width:50px;
     height: 50px;
     font-size: 16px;
+    padding-left: 5px;
   }
 
   .searchbox {
@@ -184,7 +185,6 @@
     display: none;
   }
 
-
 /* 【ハンバーガーメニューに関するCSS】 
 /*  チェックボックスを非表示にする     */
 .drawer_hidden {
@@ -197,7 +197,7 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  right: 20px;
+  right: 30px;
   z-index: 100;/* 重なり順を一番上にする */
   cursor: pointer;
   display: block;
@@ -215,7 +215,6 @@
   background: #333;
   transition: 0.5s;
   position: absolute;
-
 }
 
 /* 三本線の一番上の棒の位置調整 */
@@ -246,8 +245,8 @@
   
 /* メニューのデザイン*/
 .nav {
-  width:50px;
-  margin-left: 10px;
+  width:70px;
+
 }
 
 .nav_content {
@@ -282,7 +281,23 @@
 /* スライダー幅 */
   .slide,
   .slide2{
-    max-width:640px;  
+    max-width:670px;  
+  }
+
+  .slide img{
+    max-width:670px;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .itemspecial {
+    max-width:670px;
+    background-color: blue;
+  }
+
+  .itemsale {
+    max-width:670px;
+    background-color: tomato;
   }
 
   /* アイテムカテゴリエリア */
