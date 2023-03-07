@@ -166,7 +166,7 @@
   .searchbox {
     display: flex;
     align-items: center; /* 要素の垂直方向を中心に配置 */
-    min-width: 250px;
+    min-width: 200px;
     height: 30px;
     margin:11px 0;  
     overflow: hidden; /* 入力欄からはみ出た文字を表示しない */
@@ -176,8 +176,8 @@
   }
    
 .nav {
-  width:50px;
-  margin-left: 10px;
+  width:40px;
+  margin-left: 20px;
 }
 
   .hmenu {
@@ -262,9 +262,9 @@
   color:azure;
   margin-left: 20px;
   list-style: none;
-   margin-top: 10px; 
-   display: block;
-   text-align: center;
+  margin-top: 10px; 
+  display: block;
+  text-align: center;
 }
 
 /* アイコンがクリックされたらメニューを表示 */
@@ -276,7 +276,7 @@
   .slide,
   .slide2{
     max-width:670px;
-    width:100%; 
+    width:100%;
   }
 
   .slide img,
@@ -380,103 +380,101 @@
     font-size: 16px;
   }
 
-  /*  contact page -スマートフォン用- 
-                                    */
-.contact-frm {
-  display: none;
-}
+  /*  contact page -スマートフォン用- */
+  .contact-frm {
+    display: none;
+  }
 
-.contact-frm-sp {
-  max-width:300px;
-  width:100%;
-  display: block;
-  margin: 0 auto;
-}
+  .contact-frm-sp {
+    max-width:300px;
+    width:100%;
+    display: block;
+    margin: 0 auto;
+  }
 
-.inputTitle-sp {
-  font-size: 20px;
-  margin:70px 0 30px 20px;
-  font-weight: bold;
-}
+  .inputTitle-sp {
+    font-size: 20px;
+    margin:70px 0 30px 20px;
+    font-weight: bold;
+  }
 
-.inp-word {
-  margin:30px 0 10px 30px;
-}
+  .inp-word {
+    margin:30px 0 10px 30px;
+  }
 
-.selectjob-sp,
-.selectage-sp {
-  margin-left: 30px;
-  border:1px solid #7c6e6e;
-  background-color:antiquewhite;
-}
+  .selectjob-sp,
+  .selectage-sp {
+    margin-left: 30px;
+    border:1px solid #7c6e6e;
+    background-color:antiquewhite;
+  }
 
-.txtbox-sp {
-  width:280px;
-  height:25px;
-  margin-left: 30px;
-  border:1px solid #7c6e6e;
-  background-color:antiquewhite;
-}
+  .txtbox-sp {
+    width:280px;
+    height:25px;
+    margin-left: 30px;
+    border:1px solid #7c6e6e;
+    background-color:antiquewhite;
+  }
 
-.radio-sp {
-  margin-left: 30px;
-  border:1px solid #888;
-}
+  .radio-sp {
+    margin-left: 30px;
+    border:1px solid #888;
+  }
 
-.txt2 {
-  margin-left: 30px;
-  border:1px solid #7c6e6e;
-  background-color:antiquewhite;
-}
+  .txt2 {
+    margin-left: 30px;
+    border:1px solid #7c6e6e;
+    background-color:antiquewhite;
+  }
 
-.errMsgAge-sp {
-  color:red;
-  font-size: 14px;
-  margin-top: 5px;
-  margin-left: 30px;
-}
+  .errMsgAge-sp {
+    color:red;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-left: 30px;
+  }
 
-.errMsgGender-sp {
-  color:red;
-  font-size: 14px;
-  margin-top: 5px;
-  margin-left: 30px;
-}
+  .errMsgGender-sp {
+    color:red;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-left: 30px;
+  }
 
-.errMsgTitle-sp {
-  color:red;
-  font-size: 14px;
-  margin-top: 5px;
-  margin-left: 30px;
-}
+  .errMsgTitle-sp {
+    color:red;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-left: 30px;
+  }
 
-.errMsgGoiken-sp {
-  color:red;
-  font-size: 14px;
-  margin-top: 5px;
-  margin-left: 30px;
-}
+  .errMsgGoiken-sp {
+    color:red;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-left: 30px;
+  }
 
-.btnarea-sp {
-  width:300px;
-  text-align: center;
-}
+  .btnarea-sp {
+    width:300px;
+    text-align: center;
+  }
 
-#contactBtn-sp {
-  margin-top:30px;
-  width: 80px;
-  height:40px;
-  font-size: 16px;
-  border-radius: 10px;
-  border:1px solid #fff;
-  color:#fff;
-  background-color:darkgray;
-  text-align: center;
-}
+  #contactBtn-sp {
+    margin-top:30px;
+    width: 80px;
+    height:40px;
+    font-size: 16px;
+    border-radius: 10px;
+    border:1px solid #fff;
+    color:#fff;
+    background-color:darkgray;
+    text-align: center;
+  }
 
-.spline {
-  margin-right: 3px;
-  color:skyblue;
-}
-
+  .spline {
+    margin-right: 3px;
+    color:skyblue;
+  }
 }
