@@ -2,14 +2,6 @@
 
 /*-- タブレット向けレイアウト ～1000px --*/
 @media all and (max-width:1000px) {
-  .pc {
-    display: none;
-  }
-
-  .tab {
-    display: block;
-  }
-
   /* ヘッダーエリア */
   .hcontainer {
     max-width:1000px;
@@ -19,16 +11,20 @@
   .logo {
     width:60px;
     font-size: 18px;
+    padding-left: 5px;
+  }
+
+  .logo a {
+    font-size: 16px;
+    color:#333; 
   }
 
   .searchbox {
-
     min-width: 300px;
   }
 
   .hmenu {
     width:330px;
-
   }
 
   .limenu a,
@@ -72,6 +68,7 @@
   /*------ フッターエリア ------*/
   .fcontainer {
     max-width:1000px;
+    height: 60px;
   }
 
   .footerword {
@@ -141,14 +138,6 @@
 
 /*-- スマートフォン向けレイアウト ～670px --*/
 @media all and (max-width:670px) {
-  .pc,
-  .tab {
-    display: none;
-  }
-
-  .sp {
-    display: block;
-  }
 
   /* ヘッダーエリア */
   .hcontainer {
@@ -165,9 +154,12 @@
 
   .logo {
     width:50px;
-    height: 50px;
-    font-size: 16px;
     padding-left: 5px;
+  }
+
+  .logo a {
+    font-size: 16px;
+    color:#333; 
   }
 
   .searchbox {
@@ -201,7 +193,6 @@
   z-index: 100;/* 重なり順を一番上にする */
   cursor: pointer;
   display: block;
- 
 }
 
 /* ハンバーガーメニューのアイコン */
@@ -247,7 +238,7 @@
 /* メニューのデザイン*/
 .nav {
   width:70px;
-  margin-left: 10px;
+  margin-left: 5px;
 }
 
 .nav_content {
