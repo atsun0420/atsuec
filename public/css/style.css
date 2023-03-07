@@ -74,9 +74,6 @@ li {
   color:#333; 
 }
 
-
-
-
 .searchbox {
   display: flex;
   align-items: center; /* 要素の垂直方向を中心に配置 */
@@ -548,6 +545,10 @@ border:1px solid skyblue;
   color:#fff;
   background-color:darkgray;
   text-align: center;
+}
+
+.contact-frm-sp {
+  display: none;
 }
 
 /* お問い合わせ完了画面 */
