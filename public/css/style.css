@@ -1,16 +1,5 @@
 @charset 'utf-8';
 
-/* フッターエリアを画面最下部に表示*/
-body {
-  display: flex; /* フレックスボックスを設定*/
-  flex-flow: column; /* フレックスボックスを縦並びに設定*/
-  min-height: 100vh; /* body全体の表示領域を確保*/
-}
-
-.main {
-  flex:1; /* bodyタグ中のheader・footer領域の高さを除いた残りの部分がmainクラスで囲った領域で埋まる */
-}
-
 /*--- common ---*/
 html,body,ul,h1,h2,h3,p {
   margin: 0;
@@ -25,28 +14,6 @@ a {
 
 li {
   list-style: none;
-}
-
-/* デバイス別表示 */
-.pc {
-  display: block;
-  margin-right: 20px;
-  color:blue;
-  font-size: 14px;
-}
-
-.tab {
-  display: none;
-  margin-right: 20px;
-  color:blue;
-  font-size: 14px;
-}
-
-.sp {
-  display: none;
-  margin-right: 20px;
-  color:blue;
-  font-size: 14px;
 }
 
 /*--- ヘッダーエリア ---*/
@@ -256,6 +223,18 @@ input::placeholder{
   color:#333;
   font-size: 16px;
 }
+
+/* フッターエリアを画面最下部に表示*/
+body {
+  display: flex; /* フレックスボックスを設定*/
+  flex-flow: column; /* フレックスボックスを縦並びに設定*/
+  min-height: 100vh; /* body全体の表示領域を確保*/
+}
+
+.main {
+  flex:1; /* bodyタグ中のheader・footer領域の高さを除いた残りの部分がmainクラスで囲った領域で埋まる */
+}
+
 
 /*------ 商品一覧画面 商品一覧エリア ------*/
 
