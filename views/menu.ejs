@@ -1,19 +1,420 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/responsive.css">
- 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-  <title>商品一覧</title>
-</head>
-<body>
-  <p class="title">メニュー一覧画面です！</p>
-  <a href="/menu_details" class="form-link">商品詳細を見る</a>
-  <a href="/" class="form-link">TOPへ戻る</a>
-</body>
-</html>
+  <%- include('partials/header'); %>
+  <div class="main">
+  <div class="itemcontainer">
+    <p class="menu-category">家電・PC・スマホ</p>
+      <div class="menu-container">         
+        <div class="menu-box">
+          <a href="/menu_details"><img class="menu-name" src="images/pc1.jpg" alt=""></a>
+          <p class="menu-title">notePC AT-N230</p>
+          <p class="menu-price">98,000円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/iphone1.jpg" alt=""></a>
+          <p class="menu-title">iPotea-12</p>
+          <p class="menu-price">125,000円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/macpc.jpg" alt=""></a>
+          <p class="menu-title">P-21NC</p>
+          <p class="menu-price">89,000円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/pot.jpg" alt=""></a>
+          <p class="menu-title">ポット-F15</p>
+          <p class="menu-price">7,800円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/sentakuki.jpg" alt=""></a>
+          <p class="menu-title">At-8951TE</p>
+          <p class="menu-price">129,000円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/shaver.jpg" alt=""></a>
+          <p class="menu-title">電気シェーバー</p>
+          <p class="menu-price">27,800円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/toaster.jpg" alt=""></a>
+          <p class="menu-title">トースター</p>
+          <p class="menu-price">13,700円</p>
+        </div>
+        <div class="emptyitem">
+          <a href=""></a>
+          <p class="menu-title"></p>
+          <p class="menu-price"></p>
+        </div>
+        <div class="emptyitem">
+          <a href=""></a>
+          <p class="menu-title"></p>
+          <p class="menu-price"></p>
+        </div>
+        <div class="emptyitem">
+          <a href=""></a>
+          <p class="menu-title"></p>
+          <p class="menu-price"></p>
+        </div>
+      </div>
+
+      <p class="menu-category">食品</p>
+      <div class="menu-container"> 
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/armond.jpg" alt=""></a>
+          <p class="menu-title">香ばしい焼きアーモンド</p>
+          <p class="menu-price">980円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/udon1.jpg" alt=""></a>
+          <p class="menu-title">月見うどん</p>
+          <p class="menu-price">520円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/omuraisu.jpg" alt=""></a>
+          <p class="menu-title">懐かしオムライス</p>
+          <p class="menu-price">1,180円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/cupcake.jpg" alt=""></a>
+          <p class="menu-title">カップケーキ</p>
+          <p class="menu-price">380円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/papurica.jpg" alt=""></a>
+          <p class="menu-title">パプリカ</p>
+          <p class="menu-price">250円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/gyuudon.jpg" alt=""></a>
+          <p class="menu-title">牛丼</p>
+          <p class="menu-price">450円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/ramen1.jpg" alt=""></a>
+          <p class="menu-title">中華ラーメン</p>
+          <p class="menu-price">590円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/pasuta.jpg" alt=""></a>
+          <p class="menu-title">貝のパスタ</p>
+          <p class="menu-price">880円</p>
+        </div>
+        <div class="emptyitem">
+          <a href=""></a>
+          <p class="menu-title"></p>
+          <p class="menu-price"></p>
+        </div>
+        <div class="emptyitem">
+          <a href=""></a>
+          <p class="menu-title"></p>
+          <p class="menu-price"></p>
+        </div>
+      </div>
+
+      <p class="menu-category">ファッション</p>
+      <div class="menu-container"> 
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/sute1.jpg" alt=""></a>
+          <p class="menu-title">マルチスーツ</p>
+          <p class="menu-price">29,800円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/shoes.jpg" alt=""></a>
+          <p class="menu-title">ファニーシューズ</p>
+          <p class="menu-price">3,980円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/jewellery.jpg" alt=""></a>
+          <p class="menu-title">ダイヤジュエリー</p>
+          <p class="menu-price">298,000円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/analog-watch.jpg" alt=""></a>
+          <p class="menu-title">アナログ腕時計</p>
+          <p class="menu-price">38,000円</p>
+        </div>
+        <div class="emptyitem">
+          <a href=""></a>
+          <p class="menu-title"></p>
+          <p class="menu-price"></p>
+        </div>
+      </div>
+
+      <p class="menu-category">ドリンク・お酒</p>
+      <div class="menu-container"> 
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/drinks.jpg" alt=""></a>
+          <p class="menu-title">レモンティー</p>
+          <p class="menu-price">390円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/smoothie.jpg" alt=""></a>
+          <p class="menu-title">苺スムージー</p>
+          <p class="menu-price">680円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/cappuccino.jpg" alt=""></a>
+          <p class="menu-title">ミルクコーヒー</p>
+          <p class="menu-price">590円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/brandy.jpg" alt=""></a>
+          <p class="menu-title">ブランデー</p>
+          <p class="menu-price">590円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/white-wine.jpg" alt=""></a>
+          <p class="menu-title">白ワインボトル(3本)</p>
+          <p class="menu-price">4,980円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/party-drink.jpg" alt=""></a>
+          <p class="menu-title">カクテル(1種)</p>
+          <p class="menu-price">580円</p>
+        </div>
+        <div class="emptyitem">
+          <a href=""></a>
+          <p class="menu-title"></p>
+          <p class="menu-price"></p>
+        </div>
+        <div class="emptyitem">
+          <a href=""></a>
+          <p class="menu-title"></p>
+          <p class="menu-price"></p>
+        </div>
+        <div class="emptyitem">
+          <a href=""></a>
+          <p class="menu-title"></p>
+          <p class="menu-price"></p>
+        </div>
+        <div class="emptyitem">
+          <a href=""></a>
+          <p class="menu-title"></p>
+          <p class="menu-price"></p>
+        </div>
+      </div>
+
+      <p class="menu-category">インテリア</p>
+      <div class="menu-container"> 
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/sofa.jpg" alt=""></a>
+          <p class="menu-title">グレーソファー</p>
+          <p class="menu-price">49,800円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/sofa2.jpg" alt=""></a>
+          <p class="menu-title">マルチソファー</p>
+          <p class="menu-price">48,000円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/board1.jpg" alt=""></a>
+          <p class="menu-title">ホワイトボード(額付き)</p>
+          <p class="menu-price">2,980円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/vase.jpg" alt=""></a>
+          <p class="menu-title">白い花瓶(1本)</p>
+          <p class="menu-price">1,800円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/room4.jpg" alt=""></a>
+          <p class="menu-title">ホワイトチェア</p>
+          <p class="menu-price">10,800円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/room1.jpg" alt=""></a>
+          <p class="menu-title">カーペット</p>
+          <p class="menu-price">12,800円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/armchair.jpg" alt=""></a>
+          <p class="menu-title">西洋チェア(1脚)</p>
+          <p class="menu-price">11,800円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/room3.jpg" alt=""></a>
+          <p class="menu-title">ダッシュボード</p>
+          <p class="menu-price">15,800円</p>
+        </div>
+        <div class="emptyitem">
+          <a href=""></a>
+          <p class="menu-title"></p>
+          <p class="menu-price"></p>
+        </div>
+        <div class="emptyitem">
+          <a href=""></a>
+          <p class="menu-title"></p>
+          <p class="menu-price"></p>
+        </div>
+      </div>
+
+      <p class="menu-category">日用雑貨・キッチン用品</p>
+      <div class="menu-container"> 
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/spoon.jpg" alt=""></a>
+          <p class="menu-title">木製スプーン</p>
+          <p class="menu-price">1,080円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/fork.jpg" alt=""></a>
+          <p class="menu-title">フォーク</p>
+          <p class="menu-price">580円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/sponge.jpg" alt=""></a>
+          <p class="menu-title">スポンジ(1個)</p>
+          <p class="menu-price">280円</p>
+        </div>
+        <div class="emptyitem">
+          <a href=""></a>
+          <p class="menu-title"></p>
+          <p class="menu-price"></p>
+        </div>
+        <div class="emptyitem">
+          <a href=""></a>
+          <p class="menu-title"></p>
+          <p class="menu-price"></p>
+        </div>
+      </div>
+
+      <p class="menu-category">本・電子書籍</p>
+      <div class="menu-container"> 
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/book1.jpg" alt=""></a>
+          <p class="menu-title">Englis-第10巻</p>
+          <p class="menu-price">980円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/book2.jpg" alt=""></a>
+          <p class="menu-title">ホワイトブック</p>
+          <p class="menu-price">480円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/book3.jpg" alt=""></a>
+          <p class="menu-title">叙事詩6巻セット</p>
+          <p class="menu-price">5,000円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/book4.jpg" alt=""></a>
+          <p class="menu-title">スニペットブック</p>
+          <p class="menu-price">1,280円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/book5.jpg" alt=""></a>
+          <p class="menu-title">電子書籍10</p>
+          <p class="menu-price">1,150円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/book6.jpg" alt=""></a>
+          <p class="menu-title">ハウトゥー本セット</p>
+          <p class="menu-price">4,980円</p>
+        </div>
+        <div class="emptyitem">
+          <a href=""></a>
+          <p class="menu-title"></p>
+          <p class="menu-price"></p>
+        </div>
+        <div class="emptyitem">
+          <a href=""></a>
+          <p class="menu-title"></p>
+          <p class="menu-price"></p>
+        </div>
+        <div class="emptyitem">
+          <a href=""></a>
+          <p class="menu-title"></p>
+          <p class="menu-price"></p>
+        </div>
+        <div class="emptyitem">
+          <a href=""></a>
+          <p class="menu-title"></p>
+          <p class="menu-price"></p>
+        </div>
+      </div>
+
+      <p class="menu-category">ホビー・音楽・ゲーム</p>
+      <div class="menu-container"> 
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/hobby1.jpg" alt=""></a>
+          <p class="menu-title">カーミニチュア</p>
+          <p class="menu-price">1,380円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/hobby2.jpg" alt=""></a>
+          <p class="menu-title">CD ギター演奏-第二章</p>
+          <p class="menu-price">1,080円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/hobby3.jpg" alt=""></a>
+          <p class="menu-title">ガラスチェスセット</p>
+          <p class="menu-price">5,980円</p>
+        </div>
+        <div class="emptyitem">
+          <a href=""></a>
+          <p class="menu-title"></p>
+          <p class="menu-price"></p>
+        </div>
+        <div class="emptyitem">
+          <a href=""></a>
+          <p class="menu-title"></p>
+          <p class="menu-price"></p>
+        </div>
+      </div>
+
+      <p class="menu-category">コスメ・医薬品</p>
+      <div class="menu-container"> 
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/iyaku1.jpg" alt=""></a>
+          <p class="menu-title">フィッシュオイル</p>
+          <p class="menu-price">1,980円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/iyaku2.jpg" alt=""></a>
+          <p class="menu-title">ハーブメディシン(5種)</p>
+          <p class="menu-price">290円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/iyaku3.jpg" alt=""></a>
+          <p class="menu-title">サプリセット</p>
+          <p class="menu-price">950円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/iyaku4.jpg" alt=""></a>
+          <p class="menu-title">医薬品どれでも3種</p>
+          <p class="menu-price">3,980円</p>
+        </div>
+        <div class="emptyitem">
+          <a href=""></a>
+          <p class="menu-title"></p>
+          <p class="menu-price"></p>
+        </div>
+      </div>
+
+      <p class="menu-category">車・バイク</p>
+      <div class="menu-container"> 
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/car1.jpg" alt=""></a>
+          <p class="menu-title">クーペ-A-680</p>
+          <p class="menu-price">8,800,000円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/car2.jpg" alt=""></a>
+          <p class="menu-title">ホワイトセダンVR</p>
+          <p class="menu-price">4,900,000円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/car3.jpg" alt=""></a>
+          <p class="menu-title">マシュロエアー1800(yellow)</p>
+          <p class="menu-price">5,800,000円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/car4.jpg" alt=""></a>
+          <p class="menu-title">スポーツカーZK-red-</p>
+          <p class="menu-price">12,800,000円</p>
+        </div>
+        <div class="menu-box">
+          <a href=""><img class="menu-name" src="images/bike1.jpg" alt=""></a>
+          <p class="menu-title">コルシェ-YWD-N</p>
+          <p class="menu-price">3,700,000円</p>
+        </div>
+      </div>
+  </div>
+</div>
+  <%- include('partials/footer'); %>
