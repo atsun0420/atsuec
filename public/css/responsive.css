@@ -166,13 +166,20 @@
   .searchbox {
     display: flex;
     align-items: center; /* 要素の垂直方向を中心に配置 */
-    min-width: 200px;
-    height: 30px; 
+    max-width: 570px;
+    width:100%;
+    height: 30px;
     margin:11px 0;  
     overflow: hidden; /* 入力欄からはみ出た文字を表示しない */
     border: 2px solid skyblue;
     border-radius: 25px;
+    box-sizing: border-box;
   }
+   
+.nav {
+  width:50px;
+  margin-left: 10px;
+}
 
   .hmenu {
     display: none;
@@ -235,13 +242,9 @@
   top: 0;
   transform: rotate(-45deg);
 }
-  
-/* メニューのデザイン*/
-.nav {
-  width:70px;
-  margin-left: 10px;
-}
+ 
 
+/* アイコンメニューのデザイン*/
 .nav_content {
   max-width: 670px;
   width: 100%;
@@ -373,7 +376,7 @@
     max-width:670px;
     margin:5px auto;
   }
-
+ 
   .timesalecolor{
     color:red;
     font-size: 16px;
@@ -386,7 +389,6 @@
 }
 
 .contact-frm-sp {
-  margin: 0 20px;
   max-width:300px;
   width:100%;
   display: block;
