@@ -166,8 +166,7 @@
   .searchbox {
     display: flex;
     align-items: center; /* 要素の垂直方向を中心に配置 */
-    max-width: 570px;
-    width:100%;
+    min-width: 250px;
     height: 30px;
     margin:11px 0;  
     overflow: hidden; /* 入力欄からはみ出た文字を表示しない */
@@ -241,8 +240,7 @@
 #drawer_input:checked ~ .drawer_open span::after {
   top: 0;
   transform: rotate(-45deg);
-}
- 
+} 
 
 /* アイコンメニューのデザイン*/
 .nav_content {
