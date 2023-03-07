@@ -81,7 +81,7 @@
 
   /* アイテム一覧エリア*/
   .itemcontainer {
-    max-width:9700px;
+    max-width:970px;
     width:100%;
   }
 
@@ -201,6 +201,7 @@
   z-index: 100;/* 重なり順を一番上にする */
   cursor: pointer;
   display: block;
+ 
 }
 
 /* ハンバーガーメニューのアイコン */
@@ -246,7 +247,7 @@
 /* メニューのデザイン*/
 .nav {
   width:70px;
-
+  margin-left: 10px;
 }
 
 .nav_content {
@@ -284,7 +285,8 @@
     max-width:670px;  
   }
 
-  .slide img{
+  .slide img,
+  .slide2 img{
     max-width:670px;
     height: 300px;
     object-fit: cover;
@@ -292,11 +294,13 @@
 
   .itemspecial {
     max-width:670px;
+    width:100%;
     background-color: blue;
   }
 
   .itemsale {
     max-width:670px;
+    width:100%;
     background-color: tomato;
   }
 
@@ -315,6 +319,7 @@
   /*------ フッターエリア ------*/
 .fcontainer {
   max-width:670px;
+  width:100%;
 }
 
 .footerword {
