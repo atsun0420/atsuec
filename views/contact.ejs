@@ -45,5 +45,51 @@
       </div>
     </form>  
   </div>
+  
+  <!-- スマートフォン用  -->
+  <div class="contact-frm-sp">
+    <p class="inputTitle-sp">入力フォーム<span class="requiredSentence">※は必須項目です</span></p>  
+    <form action="" method="" name="frm-sp">
+      <p class="inp-word"><span class="spline">■</span>お名前</p>
+        <input type="text" class="txtbox-sp">
+      <p class="inp-word"><span class="spline">■</span>性別<span class="requiredRed">※</span></p>
+        <label for=""><input type="radio"  class ="radio-sp" name="gender-sp" value="1">男性</label>
+        <label for=""><input type="radio"  name="gender-sp" value="2">女性</label>
+        <p class="errMsgGender-sp"></p>
+      <p class="inp-word"><span class="spline">■</span>年代<span class="requiredRed">※</span></p>
+        <select name="selectage" class="selectage selectage-sp">
+          <option value = "">選択してください</option>
+          <option value="age1">10代</option>
+          <option value="age2">20代</option>
+          <option value="age3">30代</option>
+          <option value="age4">40代</option>
+          <option value="age5">50代</option>
+          <option value="age6">60代</option>
+          <option value="age7">70代</option>
+          <option value="age8">80代以上</option>
+        </select>
+        <p class="errMsgAge-sp"></p>
+      <p class="inp-word"><span class="spline">■</span>ご職業</p>
+        <select name="selectjob" class="selectjob-sp">
+          <option>選択してください</option>
+          <option>会社員</option>
+          <option>学生</option>
+          <option>主婦</option>
+          <option>パート・アルバイト</option>
+          <option>自営業</option>
+          <option>無職</option>
+          <option>その他</option>
+        </select>
+      <p class="inp-word"><span class="spline">■</span>ご意見タイトル<span class="requiredRed">※</span></p>
+        <input type="text" class="txttitle txttitle-sp txt2">
+        <p class="errMsgTitle-sp"></p>
+      <p class="inp-word"><span class="spline">■</span>ご意見<span class="requiredRed">※</span></p>
+        <textarea class="txtarea txtarea-sp txt2" cols="30" rows="10"></textarea>
+        <p class="errMsgGoiken-sp"></p>
+      <div class="btnarea-sp">
+        <input type="button" id="contactBtn-sp" value="送信">
+      </div>
+    </form>
+  </div>
 </div>
   <%- include('partials/footer'); %>
