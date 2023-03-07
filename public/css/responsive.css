@@ -289,13 +289,11 @@
   .itemspecial {
     max-width:670px;
     width:100%;
-    background-color: blue;
   }
 
   .itemsale {
     max-width:670px;
     width:100%;
-    background-color: tomato;
   }
 
   /* アイテムカテゴリエリア */
@@ -389,7 +387,8 @@
 
 .contact-frm-sp {
   margin: 0 20px;
-  width:300px;
+  max-width:300px;
+  width:100%;
   display: block;
   margin: 0 auto;
 }
