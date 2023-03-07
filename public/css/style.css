@@ -66,10 +66,16 @@ li {
   align-items: center; /* 要素の垂直方向を中心に配置 */
   width:100px;
   margin-right: auto;
-  padding:0 20px;
+  padding:0 10px;
+ 
+}
+.logo a {
   font-size: 20px;
   color:#333; 
 }
+
+
+
 
 .searchbox {
   display: flex;
