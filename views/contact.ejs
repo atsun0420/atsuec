@@ -2,23 +2,25 @@
 <div class="main">
   <div class="contact-frm">
     <p class="inputTitle">入力フォーム<span class="requiredSentence">※は必須項目です</span></p>  
-    <form class="tablecontact" action="" method="" name="frm-pc">
+    <form class="tablecontact" action="/create" method="post" name="frm-pc">
       <table>
         <tr>
-          <th>お名前</th><td><input type="text" id="text1" class="txtbox" name="txtbox" value=""></td>
+          <th>お名前</th><td><input type="text" id="text1" class="txtbox" name="userName" value=""></td>
         </tr>        
         <tr>
           <th>性別<span class="requiredRed">※</span></th>
             <td>
-              <label for=""><input type="radio" id="radio" class="radio" name="gender">男性</label>
-              <label for=""><input type="radio" class="radio" name="gender">女性</label>
-              <p class="errMsgGender"></p>
+              <label for=""><input type="radio" id="radio" class="radio" name="userGender" value="男性">男性</label>
+              <label for=""><input type="radio" class="radio" name="userGender" value="女性">女性</label>
+              <% if (typeof emptyErr !== 'undefined'){ %>
+                <p class="errMsgPc"><%= emptyErr.insGenderErr %></p>
+              <% } %>
             </td>
         </tr>
         <tr>
           <th>年代<span class="requiredRed">※</span></th>
             <td>
-              <select name="selectage" class="selectage">
+              <select name="userAge" class="selectage">
                 <option value="">選択してください</option>
                 <option value="10代">10代</option>
                 <option value="20代">20代</option>
@@ -27,21 +29,30 @@
                 <option value="50代">50代</option>
                 <option value="60代">60代</option>
                 <option value="70代">70代</option>
-                <option value="80代">80代以上</option>
+                <option value="80代以上">80代以上</option>
               </select>
-              <br><p class="errMsgAge"></p>
+              <% if (typeof emptyErr !== 'undefined'){ %>
+                <p class="errMsgPc"><%= emptyErr.insAgeErr %></p>
+              <% } %>
             </td>        
         </tr>        
         <tr>
-          <th>タイトル<span class="requiredRed">※</span></th><td><input type="text" id="text2" class="txttitle" name="txttitle">
-            <br><p class="errMsgTitle"></p></td>
+          <th>タイトル<span class="requiredRed">※</span></th><td><input type="text" id="text2" class="txttitle" name="userTitle">
+          <% if (typeof emptyErr !== 'undefined'){ %>
+            <p class="errMsgPc"><%= emptyErr.insTitleErr %></p>
+          <% } %>
+          </td>
         </tr>
         <tr>
-          <th>お問い合わせ内容<span class="requiredRed">※</span></th><td><textarea id="textarea" class="txtarea" name="textarea"  cols="30" rows="10"></textarea><br><p class="errMsgGoiken"></p></td>
+          <th>お問い合わせ内容<span class="requiredRed">※</span></th><td><textarea id="textarea" class="txtarea" name="userSentences"  cols="30" rows="10"></textarea>
+          <% if (typeof emptyErr !== 'undefined'){ %>
+            <p class="errMsgPc"><%= emptyErr.insSentencesErr %></p>
+          <% } %>
+          </td>
         </tr>
       </table>
       <div class="btnarea">
-        <input type="button" id="contactBtn" value="送信">
+        <input type="submit" id="contactBtn" value="送信">
       </div>
     </form>  
   </div>
@@ -49,45 +60,42 @@
   <!-- スマートフォン用  -->
   <div class="contact-frm-sp">
     <p class="inputTitle-sp">入力フォーム<span class="requiredSentence">※は必須項目です</span></p>  
-    <form action="" method="" name="frm-sp">
+    <form action="/create" method="post" name="frm-sp">
       <p class="inp-word"><span class="spline">■</span>お名前</p>
-        <input type="text" class="txtbox-sp">
+        <input type="text" class="txtbox-sp" name="userName">
       <p class="inp-word"><span class="spline">■</span>性別<span class="requiredRed">※</span></p>
-        <label for=""><input type="radio"  class ="radio-sp" name="gender-sp" value="1">男性</label>
-        <label for=""><input type="radio"  name="gender-sp" value="2">女性</label>
-        <p class="errMsgGender-sp"></p>
+        <label for=""><input type="radio"  class ="radio-sp" name="userGender" value="男性">男性</label>
+        <label for=""><input type="radio" name="userGender" value="女性">女性</label>
+        <% if (typeof emptyErr !== 'undefined'){ %>
+          <p class="errMsgSp"><%= emptyErr.insGenderErr %></p>
+        <% } %>
       <p class="inp-word"><span class="spline">■</span>年代<span class="requiredRed">※</span></p>
-        <select name="selectage" class="selectage selectage-sp">
+        <select name="userAge" class="selectage selectage-sp">
           <option value = "">選択してください</option>
-          <option value="age1">10代</option>
-          <option value="age2">20代</option>
-          <option value="age3">30代</option>
-          <option value="age4">40代</option>
-          <option value="age5">50代</option>
-          <option value="age6">60代</option>
-          <option value="age7">70代</option>
-          <option value="age8">80代以上</option>
+          <option value="10代">10代</option>
+          <option value="20代">20代</option>
+          <option value="30代">30代</option>
+          <option value="40代">40代</option>
+          <option value="50代">50代</option>
+          <option value="60代">60代</option>
+          <option value="70代">70代</option>
+          <option value="80代以上">80代以上</option>
         </select>
-        <p class="errMsgAge-sp"></p>
-      <p class="inp-word"><span class="spline">■</span>ご職業</p>
-        <select name="selectjob" class="selectjob-sp">
-          <option>選択してください</option>
-          <option>会社員</option>
-          <option>学生</option>
-          <option>主婦</option>
-          <option>パート・アルバイト</option>
-          <option>自営業</option>
-          <option>無職</option>
-          <option>その他</option>
-        </select>
+        <% if (typeof emptyErr !== 'undefined'){ %>
+          <p class="errMsgSp"><%= emptyErr.insAgeErr %></p>
+        <% } %>
       <p class="inp-word"><span class="spline">■</span>タイトル<span class="requiredRed">※</span></p>
-        <input type="text" class="txttitle txttitle-sp txt2">
-        <p class="errMsgTitle-sp"></p>
+        <input type="text" class="txttitle txttitle-sp txt2" name="userTitle">
+        <% if (typeof emptyErr !== 'undefined'){ %>
+          <p class="errMsgSp"><%= emptyErr.insTitleErr %></p>
+        <% } %>
       <p class="inp-word"><span class="spline">■</span>お問い合わせ内容<span class="requiredRed">※</span></p>
-        <textarea class="txtarea txtarea-sp txt2" cols="30" rows="10"></textarea>
-        <p class="errMsgGoiken-sp"></p>
+        <textarea class="txtarea txtarea-sp txt2" name="userSentences" cols="30" rows="10"></textarea>
+        <% if (typeof emptyErr !== 'undefined'){ %>
+          <p class="errMsgSp"><%= emptyErr.insSentencesErr %></p>
+        <% } %>
       <div class="btnarea-sp">
-        <input type="button" id="contactBtn-sp" value="送信">
+        <input type="submit" id="contactBtn-sp" value="送信">
       </div>
     </form>
   </div>
