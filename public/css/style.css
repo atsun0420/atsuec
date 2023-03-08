@@ -20,7 +20,16 @@ li {
   overflow: hidden; /* 画面右側の余白をなくす */
 }
 
-/*--- ヘッダーエリア ---*/
+/*--- フッターエリア ---*/
+html,body {
+  height:100%;  /* フッターを最下部に表示*/
+}
+
+body > .fcontainer {
+  position: sticky; /* フッターを最下部に表示*/
+  top:100vh; /* フッターを最下部に表示*/
+}
+
 .hcontainer {
   display: flex;
   max-width:1200px;
@@ -28,6 +37,7 @@ li {
   margin: 0 auto;
 }
 
+/* ヘッダーエリア */
 .header-sp {
   display:none;
 }
@@ -441,30 +451,6 @@ input::placeholder{
   text-align: right;
 }
 
-.errMsgAge {
-  color:red;
-  font-size: 14px;
-  margin-top: 5px;
-}
-
-.errMsgGender {
-  color:red;
-  font-size: 14px;
-  margin-top: 5px;
-}
-
-.errMsgTitle {
-  color:red;
-  font-size: 14px;
-  margin-top: 5px;
-}
-
-.errMsgGoiken {
-  color:red;
-  font-size: 14px;
-  margin-top: 5px;
-}
-
 .txtbox {
   width:280px;
   height:25px;
@@ -521,8 +507,20 @@ input::placeholder{
   display: none;
 }
 
-/* お問い合わせ完了画面 */
+.errMsgPc {
+  font-size: 14px;
+  color:red;
+  margin-top: 5px;
+}
 
+.errMsgSp {
+  font-size: 14px;
+  color:red;
+  margin: 5px 0 0 30px;
+  
+}
+
+/* お問い合わせ完了画面 */
 .compcontainer {
   width: 600px;
   margin: 0 auto;
