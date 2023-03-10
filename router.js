@@ -1,7 +1,7 @@
 'use strict';
 const express = require('express'); // Node.jsのフレームワーク、expressを使用するための準備
 const router = express.Router(); // ルーティング処理を記述するための準備
-const { check, validationResult } = require('express-validator'); // バリデーション処理の準備
+//const { check, validationResult } = require('express-validator'); // バリデーション処理の準備
 const mysql = require('mysql'); // Node.jsからMySQLを操作するための準備
 
 // MySQLの接続情報
@@ -48,7 +48,7 @@ router.get('/', (req, res) => {
   res.render('comp.ejs');
 })
 
-// バリデーション:express-validator使用
+// //バリデーション:express-validator使用
 // const insValidator = [
 //   check('userGender').not().isEmpty().withMessage("性別：性別を選択して下さい。"),
 //   check('userAge').not().isEmpty().withMessage("年齢：年代を選択して下さい。"),
