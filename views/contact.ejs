@@ -1,24 +1,29 @@
 <%- include('partials/header'); %>
 <div class="main">
   <div class="contact-frm">
-    <p class="inputTitle">入力フォーム<span class="requiredSentence">※は必須項目です</span></p>  
-    <form class="tablecontact" action="/create" method="post" name="frm-pc">
+    <p class="inputTitle">入力フォーム<span class="requiredSentence">※は必須項目です</span></p>
+    <!-- <% if (typeof errors !== 'undefined') { %>
+      <p class="errTitlePc">送信が完了しておりません。以下のメッセージをご覧下さい。</p>
+      <% for (const error of errors) { %>
+        
+        <p class="errMsgPc"><%= error.msg %></p>
+      <% } %>
+    <% } %>   -->
+    <form id="formidpc" class="tablecontact" action="/create" data-persist="garlic" method="post" name="frm-pc">
       <table>
         <tr>
-          <th>お名前</th><td><input type="text" id="text1" class="txtbox" name="userName" value=""></td>
+          <th>お名前</th><td><input type="text" id="text1" class="txtbox" name="userName" ></td>
         </tr>        
         <tr>
           <th>性別<span class="requiredRed">※</span></th>
             <td>
               <label for=""><input type="radio" id="radio" class="radio" name="userGender" value="男性">男性</label>
               <label for=""><input type="radio" class="radio" name="userGender" value="女性">女性</label>
-              <% if (typeof emptyErr !== 'undefined'){ %>
-                <p class="errMsgPc"><%= emptyErr.insGenderErr %></p>
-              <% } %>
+              <div class="errClass"><p class ="genderErr"></p></div>
             </td>
         </tr>
         <tr>
-          <th>年代<span class="requiredRed">※</span></th>
+          <th>年齢<span class="requiredRed">※</span></th>
             <td>
               <select name="userAge" class="selectage">
                 <option value="">選択してください</option>
@@ -31,23 +36,17 @@
                 <option value="70代">70代</option>
                 <option value="80代以上">80代以上</option>
               </select>
-              <% if (typeof emptyErr !== 'undefined'){ %>
-                <p class="errMsgPc"><%= emptyErr.insAgeErr %></p>
-              <% } %>
+              <div class="errClass"><p class ="ageErr"></p></div>
             </td>        
         </tr>        
         <tr>
           <th>タイトル<span class="requiredRed">※</span></th><td><input type="text" id="text2" class="txttitle" name="userTitle">
-          <% if (typeof emptyErr !== 'undefined'){ %>
-            <p class="errMsgPc"><%= emptyErr.insTitleErr %></p>
-          <% } %>
+            <div class="errClass"><p class ="titleErr"></p></div>
           </td>
         </tr>
         <tr>
-          <th>お問い合わせ内容<span class="requiredRed">※</span></th><td><textarea id="textarea" class="txtarea" name="userSentences"  cols="30" rows="10"></textarea>
-          <% if (typeof emptyErr !== 'undefined'){ %>
-            <p class="errMsgPc"><%= emptyErr.insSentencesErr %></p>
-          <% } %>
+          <th>お問い合わせ内容<span class="requiredRed">※</span></th><td><textarea id="textarea" class="txtarea" name="userSentences" cols="30" rows="10"></textarea>
+          <div class="errClass"><p class ="sentencesErr"></p></div>
           </td>
         </tr>
       </table>
@@ -60,16 +59,21 @@
   <!-- スマートフォン用  -->
   <div class="contact-frm-sp">
     <p class="inputTitle-sp">入力フォーム<span class="requiredSentence">※は必須項目です</span></p>  
-    <form action="/create" method="post" name="frm-sp">
+    <form id="formidsp" action="/create" method="post" data-persist="garlic" name="frm-sp">
+      <!-- <% if (typeof errors !== 'undefined') { %>
+        <p class="errTitleSp">送信が完了しておりません。<br>以下のメッセージをご覧下さい。</p>
+        <% for (const error of errors) { %>
+          <p class="errMsgSp"><%= error.msg %></p>
+        <% } %>
+      <% } %> -->
       <p class="inp-word"><span class="spline">■</span>お名前</p>
         <input type="text" class="txtbox-sp" name="userName">
       <p class="inp-word"><span class="spline">■</span>性別<span class="requiredRed">※</span></p>
         <label for=""><input type="radio"  class ="radio-sp" name="userGender" value="男性">男性</label>
         <label for=""><input type="radio" name="userGender" value="女性">女性</label>
-        <% if (typeof emptyErr !== 'undefined'){ %>
-          <p class="errMsgSp"><%= emptyErr.insGenderErr %></p>
-        <% } %>
-      <p class="inp-word"><span class="spline">■</span>年代<span class="requiredRed">※</span></p>
+        <div class="errClassSp"><p class ="genderErr"></p></div>
+       
+      <p class="inp-word"><span class="spline">■</span>年齢<span class="requiredRed">※</span></p>
         <select name="userAge" class="selectage selectage-sp">
           <option value = "">選択してください</option>
           <option value="10代">10代</option>
@@ -81,23 +85,142 @@
           <option value="70代">70代</option>
           <option value="80代以上">80代以上</option>
         </select>
-        <% if (typeof emptyErr !== 'undefined'){ %>
-          <p class="errMsgSp"><%= emptyErr.insAgeErr %></p>
-        <% } %>
+        <div class="errClassSp"><p class ="ageErr"></p></div>
+       
       <p class="inp-word"><span class="spline">■</span>タイトル<span class="requiredRed">※</span></p>
         <input type="text" class="txttitle txttitle-sp txt2" name="userTitle">
-        <% if (typeof emptyErr !== 'undefined'){ %>
-          <p class="errMsgSp"><%= emptyErr.insTitleErr %></p>
-        <% } %>
+        <div class="errClassSp"><p class ="titleErr"></p></div>
+       
       <p class="inp-word"><span class="spline">■</span>お問い合わせ内容<span class="requiredRed">※</span></p>
         <textarea class="txtarea txtarea-sp txt2" name="userSentences" cols="30" rows="10"></textarea>
-        <% if (typeof emptyErr !== 'undefined'){ %>
-          <p class="errMsgSp"><%= emptyErr.insSentencesErr %></p>
-        <% } %>
+        <div class="errClassSp"><p class ="sentencesErr"></p></div>
+      
       <div class="btnarea-sp">
         <input type="submit" id="contactBtn-sp" value="送信">
       </div>
     </form>
   </div>
 </div>
+<script>
+  $("#formidpc").validate({
+     rules: {
+      userGender: {
+        required:true,
+      },
+
+      userAge: {
+        required:true,
+      },
+
+      userTitle: {
+        required:true,
+      },
+
+      userSentences: {
+        required:true,
+      },
+    },
+
+    messages: {
+      userGender: {
+        required:"性別を選択して下さい。"
+      },
+
+      userAge: {
+        required:"年齢を選択して下さい。"
+      },
+
+      userTitle: {
+        required:"タイトルを入力して下さい。"
+      },
+
+      userSentences: {
+        required:"内容を入力して下さい。"
+      },
+    },
+    
+    errorPlacement: function (error,element) {
+      if(element.attr("name") === "userGender")
+      {
+        error.insertAfter(".genderErr");
+      }
+      else if(element.attr("name") === "userAge")
+      {
+        error.insertAfter(".ageErr");
+      }
+      else if(element.attr("name") === "userTitle")
+      {
+        error.insertAfter(".titleErr");
+      }
+      else if(element.attr("name") === "userSentences")
+      {
+        error.insertAfter(".sentencesErr");
+      }
+      else{
+        error.insertAfter(element);
+      }
+    }
+  }); 
+
+  $("#formidsp").validate({
+     rules: {
+      userGender: {
+        required:true,
+      },
+
+      userAge: {
+        required:true,
+      },
+
+      userTitle: {
+        required:true,
+      },
+
+      userSentences: {
+        required:true,
+      },
+    },
+
+    messages: {
+      userGender: {
+        required:"性別を選択して下さい。"
+      },
+
+      userAge: {
+        required:"年齢を選択して下さい。"
+      },
+
+      userTitle: {
+        required:"タイトルを入力して下さい。"
+      },
+
+      userSentences: {
+        required:"内容を入力して下さい。"
+      },
+    },
+
+    errorPlacement: function (error,element) {
+      if(element.attr("name") === "userGender")
+      {
+        error.insertAfter(".genderErr");
+      }
+      else if(element.attr("name") === "userAge")
+      {
+        error.insertAfter(".ageErr");
+      }
+      else if(element.attr("name") === "userTitle")
+      {
+        error.insertAfter(".titleErr");
+      }
+      else if(element.attr("name") === "userSentences")
+      {
+        error.insertAfter(".sentencesErr");
+      }
+      else{
+        error.insertAfter(element);
+      }
+    }
+  }); 
+
+</script>
   <%- include('partials/footer'); %>
