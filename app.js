@@ -8,5 +8,5 @@ app.use(express.static('public'));
 app.use(express.urlencoded({extended: true}));
 app.use('/', router); // ルーティングのトップページを設定
 
-const port = 5500; // port番号：5500番を指定
-app.listen(5500);
+const port = 3000; // port番号：3000番を指定
+app.listen(3000);
