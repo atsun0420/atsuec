@@ -22,7 +22,7 @@ con.connect((err) => {
   console.log('SQL start!');
 });
 
-/* 画面を表示したいとき：getを使用  データベースを変更したいとき：postを使用 */
+/* 画面を表示したいとき：getを使用 データベースを変更したいとき：postを使用 */
 // TOP画面の表示
 router.get('/', (req, res) => {
   res.render('top.ejs');
