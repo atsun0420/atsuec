@@ -48,7 +48,7 @@ router.get('/', (req, res) => {
   res.render('comp.ejs');
 })
 
-// バリデーション(express-validator使用)
+// バリデーション:express-validator使用
 // const insValidator = [
 //   check('userGender').not().isEmpty().withMessage("性別：性別を選択して下さい。"),
 //   check('userAge').not().isEmpty().withMessage("年齢：年代を選択して下さい。"),
