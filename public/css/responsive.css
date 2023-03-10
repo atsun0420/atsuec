@@ -32,7 +32,7 @@
   margin-right: 30px;
   color:#333;
   font-size: 18px;
-}
+  }
 
   .slide,
   .slide2{
@@ -176,104 +176,104 @@
     box-sizing: border-box;
   }
    
-.nav {
-  width:40px;
-  margin-left: 20px;
-}
+  .nav {
+    width:40px;
+    margin-left: 20px;
+  }
 
   .hmenu {
     display: none;
   }
 
-/* 【ハンバーガーメニューに関するCSS】 
-/*  チェックボックスを非表示にする     */
-.drawer_hidden {
-  display: none;
-}
+  /* 【ハンバーガーメニューに関するCSS】 
+  /*  チェックボックスを非表示にする     */
+  .drawer_hidden {
+    display: none;
+  }
 
-/* ハンバーガーアイコンの設置スペース */
-.drawer_open {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  right: 30px;
-  z-index: 100;/* 重なり順を一番上にする */
-  cursor: pointer;
-  display: block;
-}
+  /* ハンバーガーアイコンの設置スペース */
+  .drawer_open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 30px;
+    z-index: 100;/* 重なり順を一番上にする */
+    cursor: pointer;
+    display: block;
+  }
 
-/* ハンバーガーメニューのアイコン */
-.drawer_open span,
-.drawer_open span:before,
-.drawer_open span:after {
-  content: '';
-  display: block; /* メニューアイコンを表示 */
-  height: 3px;
-  width: 25px;
-  border-radius: 3px;
-  background: #333;
-  transition: 0.5s;
-  position: absolute;
-}
+  /* ハンバーガーメニューのアイコン */
+  .drawer_open span,
+  .drawer_open span:before,
+  .drawer_open span:after {
+    content: '';
+    display: block; /* メニューアイコンを表示 */
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background: #333;
+    transition: 0.5s;
+    position: absolute;
+  }
 
-/* 三本線の一番上の棒の位置調整 */
-.drawer_open span:before {
-  bottom: 8px;
-}
+  /* 三本線の一番上の棒の位置調整 */
+  .drawer_open span:before {
+    bottom: 8px;
+  }
 
-/* 三本線の一番下の棒の位置調整 */
-.drawer_open span:after {
-  top: 8px;
-}
+  /* 三本線の一番下の棒の位置調整 */
+  .drawer_open span:after {
+    top: 8px;
+  }
 
-/* アイコンがクリックされたら真ん中の線を透明にする */
-#drawer_input:checked ~ .drawer_open span {
-  background: rgba(255, 255, 255, 0);
-}
+  /* アイコンがクリックされたら真ん中の線を透明にする */
+  #drawer_input:checked ~ .drawer_open span {
+    background: rgba(255, 255, 255, 0);
+  }
 
-/* アイコンがクリックされたらアイコンが×印になるように上下の線を回転 */
-#drawer_input:checked ~ .drawer_open span::before {
-  bottom: 0;
-  transform: rotate(45deg);
-}
+  /* アイコンがクリックされたらアイコンが×印になるように上下の線を回転 */
+  #drawer_input:checked ~ .drawer_open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
 
-#drawer_input:checked ~ .drawer_open span::after {
-  top: 0;
-  transform: rotate(-45deg);
-} 
+  #drawer_input:checked ~ .drawer_open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  } 
 
-/* アイコンメニューのデザイン*/
-.nav_content {
-  max-width: 670px;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  /* top:0%;  // メニューアイコンクリック時、左または右からメニューが表示 */
-  bottom: 100%; /* メニューアイコンクリック時、上からメニューが表示 */
-  left: 0%; /* メニューアイコンクリック時、上からメニューが表示 */
-  /* left: 100%; /* メニューアイコンクリック時、右からメニューが表示 */
-  /* right: 100%; /* メニューアイコンクリック時、左からメニューが表示 */
-  z-index: 99;
-  background: rgb(110, 110, 110);
-  transition: .5s; 
-}
+  /* アイコンメニューのデザイン*/
+  .nav_content {
+    max-width: 670px;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    /* top:0%;  // メニューアイコンクリック時、左または右からメニューが表示 */
+    bottom: 100%; /* メニューアイコンクリック時、上からメニューが表示 */
+    left: 0%; /* メニューアイコンクリック時、上からメニューが表示 */
+    /* left: 100%; /* メニューアイコンクリック時、右からメニューが表示 */
+    /* right: 100%; /* メニューアイコンクリック時、左からメニューが表示 */
+    z-index: 99;
+    background: rgb(110, 110, 110);
+    transition: .5s; 
+  }
 
-.nav_list li a{
-  color:azure;
-  margin-left: 20px;
-  list-style: none;
-  margin-top: 10px; 
-  display: block;
-  text-align: center;
-}
+  .nav_list li a{
+    color:azure;
+    margin-left: 20px;
+    list-style: none;
+    margin-top: 10px; 
+    display: block;
+    text-align: center;
+  }
 
-/* アイコンがクリックされたらメニューを表示 */
-#drawer_input:checked ~ .nav_content {
-  bottom: 0;/* メニューを画面に入れる */
-}
+  /* アイコンがクリックされたらメニューを表示 */
+  #drawer_input:checked ~ .nav_content {
+    bottom: 0;/* メニューを画面に入れる */
+  }
 
-/* スライダー幅 */
+  /* スライダー幅 */
   .slide,
   .slide2{
     max-width:670px;
@@ -311,15 +311,15 @@
   }
 
   /*------ フッターエリア ------*/
-.fcontainer {
-  max-width:670px;
-  width:100%;
-}
+  .fcontainer {
+    max-width:670px;
+    width:100%;
+  }
 
-.footerword {
-  color:#333;
-  font-size: 14px;
-}
+  .footerword {
+    color:#333;
+    font-size: 14px;
+  }
 
   /* アイテム一覧エリア*/
   .itemcontainer {
@@ -381,7 +381,7 @@
     font-size: 16px;
   }
 
-  /*  contact page -スマートフォン用- */
+  /* contact page -スマートフォン用- */
   .contact-frm {
     display: none;
   }
@@ -479,7 +479,6 @@
   }
 
   /* お問い合わせ完了画面 */
-
   .compcontainer {
     width: 320px;
     margin-top: 30px;
