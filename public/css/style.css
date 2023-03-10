@@ -507,17 +507,31 @@ input::placeholder{
   display: none;
 }
 
-.errMsgPc {
+.errClass {
   font-size: 14px;
   color:red;
+}
+
+.errClassSp {
+  font-size: 14px;
+  color:red;
+  margin-left: 30px;
+}
+
+.errMsgPc {
+  font-size: 14px;
+  color:orange;
   margin-top: 5px;
+}
+
+.errTitleSp {
+  margin: 5px 0 0 20px;
 }
 
 .errMsgSp {
   font-size: 14px;
-  color:red;
-  margin: 5px 0 0 30px;
-  
+  color:orange;
+  margin: 5px 0 0 20px;
 }
 
 /* お問い合わせ完了画面 */
