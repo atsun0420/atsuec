@@ -72,7 +72,6 @@
         <label for=""><input type="radio"  class ="radio-sp" name="userGender" value="男性">男性</label>
         <label for=""><input type="radio" name="userGender" value="女性">女性</label>
         <div class="errClassSp"><p class ="genderErr"></p></div>
-       
       <p class="inp-word"><span class="spline">■</span>年齢<span class="requiredRed">※</span></p>
         <select name="userAge" class="selectage selectage-sp">
           <option value = "">選択してください</option>
@@ -86,15 +85,12 @@
           <option value="80代以上">80代以上</option>
         </select>
         <div class="errClassSp"><p class ="ageErr"></p></div>
-       
       <p class="inp-word"><span class="spline">■</span>タイトル<span class="requiredRed">※</span></p>
         <input type="text" class="txttitle txttitle-sp txt2" name="userTitle">
         <div class="errClassSp"><p class ="titleErr"></p></div>
-       
       <p class="inp-word"><span class="spline">■</span>お問い合わせ内容<span class="requiredRed">※</span></p>
         <textarea class="txtarea txtarea-sp txt2" name="userSentences" cols="30" rows="10"></textarea>
         <div class="errClassSp"><p class ="sentencesErr"></p></div>
-      
       <div class="btnarea-sp">
         <input type="submit" id="contactBtn-sp" value="送信">
       </div>
@@ -220,7 +216,6 @@
         error.insertAfter(element);
       }
     }
-  }); 
-
+  });
 </script>
   <%- include('partials/footer'); %>
