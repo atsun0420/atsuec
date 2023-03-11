@@ -20,16 +20,7 @@ li {
   overflow: hidden; /* 画面右側の余白をなくす */
 }
 
-/*--- フッターエリア ---*/
-html,body {
-  height:100%;  /* フッターを最下部に表示*/
-}
-
-body > .fcontainer {
-  position: sticky; /* フッターを最下部に表示*/
-  top:100vh; /* フッターを最下部に表示*/
-}
-
+/* header area */
 .hcontainer {
   display: flex;
   max-width:1200px;
@@ -37,7 +28,6 @@ body > .fcontainer {
   margin: 0 auto;
 }
 
-/* ヘッダーエリア */
 .header-sp {
   display:none;
 }
@@ -111,7 +101,34 @@ input::placeholder{
   margin-left: 40px;
 }
 
-/*------ トップ画面 スライダー処理 ------*/
+/*--- footer area ---*/
+html,body {
+  height:100%;  /* フッターを最下部に表示*/
+}
+
+body > .fcontainer {
+  position: sticky; /* フッターを最下部に表示*/
+  top:100vh; /* フッターを最下部に表示*/
+}
+
+.fcontainer {
+  width:1200px;
+  height: 80px;
+  background-color: skyblue;
+  margin: 0 auto;
+  border-top:1px solid #767d83;
+  margin-top: 50px;
+  display: grid; /* 複数行をグリッド形式にする*/
+  place-content: center; /* containerという親要素を中央に揃える*/
+  place-items: center; /* コンテナの中のアイテムをそれぞれ中央にする */
+}
+
+.footerword {
+  color:#333;
+  font-size: 16px;
+}
+
+/*------ top slider ------*/
 .slide{
   max-width:1200px;
   width:100%;
@@ -143,7 +160,6 @@ input::placeholder{
     font-size: 30px!important;
 }
 
-/*------ トップ画面 商品一覧エリア ------*/
 .itemcategory {
   width: 1000px;
   height: 80px;
@@ -176,7 +192,6 @@ input::placeholder{
   color:blueviolet;
 }
 
-/*------ トップ画面 アイテム特集エリア ------*/
 .itemspecial {
   width: 1200px;
   color:blueviolet;
@@ -209,7 +224,6 @@ input::placeholder{
   height:auto!important;
 }
 
-/*------ トップ画面 お買い得セールエリア ------*/
 .itemsale {
   width: 1200px;
   height: 120px;
@@ -220,26 +234,7 @@ input::placeholder{
   font-size: 20px;
 }
 
-/*------ フッターエリア ------*/
-.fcontainer {
-  width:1200px;
-  height: 80px;
-  background-color: skyblue;
-  margin: 0 auto;
-  border-top:1px solid #767d83;
-  margin-top: 50px;
-  display: grid; /* 複数行をグリッド形式にする*/
-  place-content: center; /* containerという親要素を中央に揃える*/
-  place-items: center; /* コンテナの中のアイテムをそれぞれ中央にする */
-}
-
-.footerword {
-  color:#333;
-  font-size: 16px;
-}
-
-/*------  商品一覧エリア ------*/
-
+/* itemForm area */
 .itemcontainer {
   max-width:1200px;
   margin: 0 auto;
@@ -312,7 +307,7 @@ input::placeholder{
   margin-top: 2px;
 }
 
-/* アイテム詳細エリア */
+/* itemDetails area */
 
 .itemdetail-container {
   display: flex;
@@ -378,7 +373,7 @@ input::placeholder{
   color:antiquewhite;
 }
 
-/*  お問い合わせ画面  */
+/* contact area */
 .contact-frm {
   width:600px;
   margin: 0 auto;  
@@ -534,7 +529,7 @@ input::placeholder{
   margin: 5px 0 0 20px;
 }
 
-/* お問い合わせ完了画面 */
+/* contactComp area */
 .compcontainer {
   width: 600px;
   margin: 0 auto;
