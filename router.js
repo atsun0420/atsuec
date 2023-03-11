@@ -48,6 +48,33 @@ router.get('/', (req, res) => {
   res.render('comp.ejs');
 })
 
+// 新規登録処理
+.post('/create',
+  (req, res, next) => {
+  let uname = req.body.userName;
+  let ugender = req.body.userGender;
+  let uage = req.body.userAge;
+  let utitle = req.body.userTitle;
+  let usentences = req.body.userSentences;
+
+  con.query('insert into userreq(username,usergender,userage,usertitle,usersenetences) values(?,?,?,?,?)',
+  [uname,ugender,uage,utitle,usentences],
+  (error,results)=>{
+      if(error) {
+        console.log(error);
+        return;
+      }
+      // ラジオボタンが未選択の場合は特殊処理、値がundefinedになるので、void 0 を記述
+      // if(ugender === void 0) {
+      //  res.render('contact.ejs',{emptyErr : {insGenderErr : '性別を選択してください'}});
+      // }
+      // 全ての項目に値が入力または選択されていたら完了画面へ遷移
+      if(ugender !== "" && uage !== "" && utitle !== "" && usentences !== ""){
+        res.redirect('/comp');
+      }        
+    });         
+});
+
 // //バリデーション:express-validator使用
 // const insValidator = [
 //   check('userGender').not().isEmpty().withMessage("性別：性別を選択して下さい。"),
@@ -67,31 +94,4 @@ router.get('/', (req, res) => {
 //       next();
 //   },
 // ];
-
-// 新規登録処理
- router.post('/create',
-   (req, res, next) => {
-   let uname = req.body.userName;
-   let ugender = req.body.userGender;
-   let uage = req.body.userAge;
-   let utitle = req.body.userTitle;
-   let usentences = req.body.userSentences;
-  
-   con.query('insert into userreq(username,usergender,userage,usertitle,usersenetences) values(?,?,?,?,?)',
-   [uname,ugender,uage,utitle,usentences],
-   (error,results)=>{
-        if(error) {
-          console.log(error);
-          return;
-        }
-        // ラジオボタンが未選択の場合は特殊処理、値がundefinedになるので、void 0 を記述
-        // if(ugender === void 0) {
-        //  res.render('contact.ejs',{emptyErr : {insGenderErr : '性別を選択してください'}});
-        // }
-        // 全ての項目に値が入力または選択されていたら完了画面へ遷移
-        if(ugender !== "" && uage !== "" && utitle !== "" && usentences !== ""){
-          res.redirect('/comp');
-        }        
-     });         
-  });
 module.exports = router;
